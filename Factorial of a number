@@ -1,0 +1,13 @@
+#include <stdio.h>
+int main()
+{
+    int x,y=1,i;
+    printf("Enter a number to gert it's factorial = ");
+    scanf("%d",&x);
+    for(i=1;i<=x;i++)
+    {
+        y = y * i;
+    }
+    printf("Factorial of %d is %d ",x,y);
+    return 0;
+}
