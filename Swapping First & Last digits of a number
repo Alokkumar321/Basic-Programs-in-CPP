@@ -1,0 +1,18 @@
+#include<iostream>
+#include<math.h>
+using namespace std;
+int main()
+{
+	int num, first, last, swap, digit, divide;
+	cout<<"Enter number: ";
+	cin>>num;
+	digit = log10(num);
+	divide = pow(10,digit);
+	first = num/divide;
+	num = num % divide;
+	last = num % 10;
+	num = num/10;
+	swap = last * divide + num * 10 + first;
+	cout<<"Swapped number is: "<<swap;
+	return 0;
+}
