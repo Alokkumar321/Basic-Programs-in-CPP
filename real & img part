@@ -1,0 +1,93 @@
+#include<iostream>
+
+using namespace std;
+
+
+
+class complex
+
+{
+
+    int real,img;
+
+    public:
+
+        void get()
+
+        {
+
+            cout<<"\nEnter Real Part:- ";
+
+            cin>>real;
+
+            cout<<"\nEnter Imaginary Part:- ";
+
+            cin>>img;
+
+        }
+
+
+
+        void display()
+
+        {
+
+            cout<<real<<"+"<<img<<"i"<<endl;
+
+
+
+        }
+
+        void sum(complex c1,complex c2)
+
+        {
+
+            real=c1.real+c2.real;
+
+            img=c1.img+c2.img;
+
+        }
+
+};
+
+
+
+int main()
+
+{
+
+    complex c1,c2,c3;
+
+    cout<<"Enter 1st complex number:- \n";
+
+    c1.get();
+
+    cout<<"\nEnter 2nd complex number:- ";
+
+    c2.get();
+
+    cout<<"\nThe 1st complex number is:- ";
+
+    c1.display();
+
+    cout<<"\nThe 2nd complex number is:- ";
+
+    c2.display();
+
+
+
+    c3.sum(c1,c2);
+
+
+
+    cout<<"\nThe Sum of two complex numbers are:- ";
+
+    c3.display();
+
+
+
+    return 0;
+
+
+
+}
