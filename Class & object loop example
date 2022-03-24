@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+
+class count{
+    public:
+    int n,i;
+    void setData(void);
+    void getData(void){;
+}
+};
+void count :: setData(void){
+    cout<<"Enter a number"<<n<<endl;
+    cin>>n;
+    for(i=1;i<=n;i++){
+    cout<<""<<i;}
+}
+int main(){
+    count number;
+    number.setData();
+    number.getData();
+    return 0;
+}
