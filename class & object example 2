@@ -1,0 +1,25 @@
+#include<iostream>
+#include<string>
+using namespace std;
+class student{
+    public:
+    string name;
+    int roll;int section;
+    void setData(string name1,int roll1, int section1);
+    void getData(){
+        cout<<"Name of the student = "<<name<<endl;
+        cout<<"Roll number of student = "<<roll<<endl;
+        cout<<"Class of student = "<<section<<endl;
+    }
+};
+void student :: setData(string name1, int roll1, int section1){
+    name = name1;
+    roll = roll1;
+    section = section1;
+}
+int main(){
+    student Alok;
+    Alok.setData("Alok",7,12);
+    Alok.getData();
+    return 0;
+}
