@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+class calculator{
+    public:
+    int x, y, sum;
+    void set_calculator_data();
+    void get_calculator_data();
+};
+void calculator :: set_calculator_data(){
+    cout<<"Enter the number = ";
+    cin>>x;
+    cout<<"Enter the number = ";
+    cin>>y;
+}
+void calculator :: get_calculator_data(){
+    cout<<x<<"+"<<y<<"="<<x+y<<endl;
+    cout<<x<<"-"<<y<<"="<<x-y<<endl;
+    cout<<x<<"*"<<y<<"="<<x*y<<endl;
+    cout<<x<<"/"<<y<<"="<<x/y<<endl;
+    cout<<x<<"%"<<y<<"="<<x%y<<endl;
+}
+int main(){
+    calculator cal;
+    cal.set_calculator_data();
+    cal.get_calculator_data();
+    return 0;
+}
