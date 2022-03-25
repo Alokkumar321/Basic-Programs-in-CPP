@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+
+class oneton{
+    int n;
+    public:
+    void getData();
+    void setData();
+};
+void oneton :: getData(){
+    cout<<"Enter number = ";
+    cin>>n;
+}
+void oneton :: setData(){
+    int i;
+    for(i=1; i<=n; i++)
+    cout<<""<<i;
+}
+int main()
+{
+    oneton aa;
+    aa.getData();
+    aa.setData();
+    return 0;
+}
