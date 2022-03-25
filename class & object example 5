@@ -1,0 +1,24 @@
+#include<iostream>
+using namespace std;
+
+class program{
+    int x,y;
+    public:
+    void set_distance_data();
+    void get_distance_data();
+};
+void program :: set_distance_data(){
+    cout<<x<<"+"<<y<<"="<<x+y;
+}
+void program :: get_distance_data(){
+    cout<<"Enter distance 1st = ";
+    cin>>x;
+    cout<<"Enter distance 2nd = ";
+    cin>>y;
+}
+int main()
+{
+    program dis;
+    dis.get_distance_data();
+    dis.set_distance_data();
+}
