@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+
+class addition{
+    public:
+    int x,y;
+    void setData();
+    void getData();
+};
+void addition :: setData(){
+    cout<<"enter 1st number = ";
+    cin>>x;
+    cout<<"enter 2nd number = ";
+    cin>>y;
+}
+void addition :: getData(){
+    cout<<"sum is = "<<x+y;
+}
+int main()
+{
+    addition sum;
+    sum.setData();
+    sum.getData();
+    return 0;
+}
