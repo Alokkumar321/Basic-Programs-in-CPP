@@ -1,0 +1,22 @@
+#include<iostream>
+#include<string>
+using namespace std;
+
+class item{
+    public:
+    int a=300,b=250,c=100,d=70;
+    void set_item_data();
+    void get_item_data();
+};
+void item :: set_item_data(){
+    cout<<"list of items :-"<<endl<<"Rice - Rs 300/kg"<<endl<<"Wheat - Rs 250/kg"<<endl<<"Edible oil - Rs 100/ltr"<<endl<<"Pulses - Rs 70/kg"<<endl;
+}
+void item :: get_item_data(){
+    cout<<"Total of the product = "<<a+b+c+d;
+}
+int main(){
+    item product;
+    product.set_item_data();
+    product.get_item_data();
+    return 0;
+}
