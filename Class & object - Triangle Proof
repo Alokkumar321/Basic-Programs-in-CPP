@@ -1,0 +1,32 @@
+#include<iostream>
+using namespace std;
+class traingle{
+    private:
+    int z;
+    public:
+    int x,y,sum;
+    void setData(int z1);
+    void set_triangle_data();
+    void getData(){
+    sum = x+y+z;
+    if(sum==180){
+    cout<<"It is a valid Triangle";}
+    else{
+    cout<<"It is an invalid Triangle";}
+    }
+};
+void traingle :: set_triangle_data(){
+    cout<<"Enter 1st angle = ";
+    cin>>x;
+    cout<<"Enter 2nd angle = ";
+    cin>>y;
+    cout<<"Enter 3rd angle = ";
+    cin>>z;
+    cout<<"  "<<endl;
+}
+int main(){
+    traingle set;
+    set.set_triangle_data();
+    set.getData();
+    return 0;
+}
