@@ -1,0 +1,38 @@
+#include<iostream>
+using namespace std;
+
+class employee{
+    int id;
+    static int count; //defining count here, like count = 10 will throw an error//
+    public:
+    void setData(){
+        cout<<"Enter ID = ";
+        cin>>id;
+        count++;
+    }
+    void getData(){
+        cout<<"The ID of the Employee is = "<<id<<" and Employee number is = "<<count<<endl;
+    }
+    static void getCount(){ /*This is Static Function*/
+        cout<<"The value of count is = "<<count<<endl;
+    }
+};
+
+int employee::count; // we can define count here, like count = 10. so, count will start from 10//
+
+int main(){
+    employee Alok, Asheesh, Ankit;
+    Alok.setData();
+    Alok.getData();
+    employee::getCount(); //Used to display static void getCount//
+    
+    Asheesh.setData();
+    Asheesh.getData();
+    employee::getCount();
+    
+    Ankit.setData();
+    Ankit.getData();
+    employee::getCount();
+    
+    return 0;
+}
