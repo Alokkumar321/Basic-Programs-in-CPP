@@ -1,0 +1,33 @@
+#include<iostream>
+using namespace std;
+
+class Complex{
+    int a,b;
+    public:
+    void setNUmber(int x, int y){
+        a = x;
+        b = y;
+    }
+    friend Complex sumComplex(Complex o1, Complex o2); //friend returnType functionName(arguments);//
+    void printNumber(){
+        cout<<"Sum of Complex NUmber = "<<a<<" + "<<b<<"i"<<endl;
+        }
+};
+Complex sumComplex(Complex o1, Complex o2){
+    Complex o3;
+    o3.setNUmber((o1.a + o2.a),(o1.b + o2.b));
+    return o3;
+}
+int main(){
+    Complex p,q,sum;
+    p.setNUmber(2,3);
+    p.printNumber();
+    
+    q.setNUmber(4,5);
+    q.printNumber();
+    
+    sum = sumComplex(p,q);
+    sum.printNumber();
+    
+    return 0;
+}
