@@ -1,0 +1,14 @@
+#include<iostream>
+using namespace std;
+
+inline int addition(int x, int y){
+    return x+y;
+}
+int main(){
+    int x,y;
+    cout<<"Enter Value of x = ";
+    cin>>x;
+    cout<<"Enter Value of y = ";
+    cin>>y;
+    cout<<"Sum of "<<x<<" & "<<y<<" is = "<<addition(x,y);
+}
