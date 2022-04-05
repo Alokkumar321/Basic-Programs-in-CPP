@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+class addition{
+    int a,b;
+    public:
+    void setData( int num1, int num2){
+        a = num1;
+        b = num2;
+    }
+    friend int add(addition a1, addition a2);
+    
+};
+int add(addition a1, addition a2){
+    float a3 = a1.a + a1.b;
+    return a3;
+}
+int main(){
+    addition a,b;
+    a.setData(3,2);
+    int a3 = add(a,b);
+    cout<<"sum is = "<<a3;
+}
