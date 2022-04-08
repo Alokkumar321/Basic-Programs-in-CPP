@@ -1,0 +1,38 @@
+#include<iostream>
+using namespace std;
+
+class student{
+    
+    long int phone_number;
+    int roll_no;
+    
+    public:
+    string address;
+    string name;
+    void setData(long int x, int y);
+    void getData();
+};
+
+void student :: setData(long int x, int y){
+    phone_number = x;
+    roll_no = y;
+}
+void student :: getData(){
+    cout<<"Name of the student = "<<name<<endl;
+    cout<<"Roll Number of the student = "<<roll_no<<endl;
+    cout<<"phone Number of the student = "<<phone_number<<endl;
+}
+int main(){
+    student sam, john;
+    sam.name = "SAM";
+    sam.setData(989344578, 7);
+    sam.getData();
+    
+    cout<<endl;
+    
+    john.name = "john";
+    john.setData(8077798652, 8);
+    john.getData();
+    
+    return 0;
+}
