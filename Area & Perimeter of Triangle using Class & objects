@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+class triangle{
+    float h,b,a,d,c;
+    public:
+    float area;
+    float perimeter;
+    void triangleArea(int x, int y, int z, int k, int l){
+        h = x;
+        b = y;
+        a = z;
+        d = k;
+        c = l;
+    }
+    void setData(){
+        area = (h * b)/2;
+        perimeter = a + d + c;
+        cout<<" Area of the triangle is = "<<area<<endl;
+        cout<<" Perimeter of the triangle is = "<<perimeter<<endl;
+    }
+};
+int main(){
+    triangle fig;
+    fig.triangleArea(5,3,3,4,5);
+    fig.setData();
+    return 0;
+}
