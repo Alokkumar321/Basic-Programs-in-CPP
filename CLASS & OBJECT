@@ -1,0 +1,24 @@
+#include<iostream>
+using namespace std;
+class employee{
+    public:
+    int roll, wow;
+    void setData(int r, int t){
+        roll = r;
+        wow = t;
+    }
+    void getData(){
+        cout<<"Roll Number = "<<roll<<endl;
+        cout<<"wow = "<<wow;
+    }
+};
+int main(){
+    employee alok;
+    int x,y;
+    cout<<"Enter Roll number = ";
+    cin>>x>>y;
+    alok.roll=x;
+    alok.wow=y;
+    alok.getData();
+    return 0;
+}
