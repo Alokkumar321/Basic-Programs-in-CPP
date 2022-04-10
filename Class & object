@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+class complex{
+    int real, img;
+    public:
+    complex(int r, int i){
+        real = r;
+        img = i;
+    }
+    int get_real()
+    {
+        return real;
+    }
+    int get_img()
+    {
+        return img;
+    }
+    void cal(complex c1){
+        cout<<c1.get_real()+real<< " + "<<c1.get_img()+img<<"i"<<endl; //addition
+        cout<<real-c1.get_real()<<" - "<<img-c1.get_img()<<"i"<<endl;//subtraction
+        cout<<((c1.get_real()*real)-(c1.get_img()*img))<<" + "<<((c1.get_real()*img)+(c1.get_img()*real))<<"i"<<endl;
+    }
+};
+int main(){
+    complex c1(4,5);
+    complex c2(2,3);
+    c1.cal(c2);
+    return 0;
+}
