@@ -1,0 +1,48 @@
+#include<iostream>
+#include<string>
+using namespace std;
+class Student{
+    private:
+        int salary;
+        int year_of_joining;
+    public:
+        string name, address;
+        void setData(int x, int y);
+        void getData1(){
+
+            cout<<name<<"        "<<year_of_joining<<"            "<<salary<<"     "<<address<<endl;
+        }
+        void getData2(){
+
+            cout<<name<<"           "<<year_of_joining<<"            "<<salary<<"      "<<address<<endl;
+        }
+        void getData3(){
+
+            cout<<name<<"          "<<year_of_joining<<"            "<<salary<<"      "<<address<<endl;
+        }
+        
+};
+void Student :: setData(int x, int y){
+    salary = x;
+    year_of_joining = y;
+    
+}
+int main(){
+    Student Robert,Sam, John;
+    cout<<"NAME"<<"      YEAR OF JOINING"<<"     SALARY"<<"        ADDRESS"<<endl<<endl;
+    Robert.name = "Robert";
+    Robert.address = "64C- WallsStreat";
+    Robert.setData(100000,1994);
+    Robert.getData1();
+    
+    Sam.name = "Sam";
+    Sam.address = "68D- WallsStreat";
+    Sam.setData(90000,2000);
+    Sam.getData2();
+    
+    John.name = "John";
+    John.address = "26B- WallsStreat";
+    John.setData(80000,1999);
+    John.getData3();
+    return 0;
+}
