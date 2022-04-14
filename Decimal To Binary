@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+class Decimal{
+    int n,r,m=1,bin=0;
+    public:
+    void setNumber(){
+        cout<<"Enter the Decimal Number = ";
+        cin>>n;
+        while(n!=0)
+       {
+        r=n%2;
+        bin=bin+(r*m);
+        m=m*10;
+        n=n/2;
+       }
+    }
+    friend int binary(Decimal);
+};
+int binary(Decimal A){
+    cout<<"Binary Digits are = "<<A.bin;
+    return A.bin;
+}
+int main(){
+    Decimal A;
+    A.setNumber();
+    binary(A);
+    return 0;
+}
