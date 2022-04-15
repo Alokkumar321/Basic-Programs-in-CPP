@@ -1,0 +1,33 @@
+#include<iostream>
+using namespace std;
+class Perfect{
+    int n,i,sum=0;
+    public:
+    void input(){
+        cout<<"Enter a Number = ";
+        cin>>n;
+        for(i=1; i<n; i++)
+    {
+        if(n%i==0)
+        {
+            sum = sum + i;
+        }
+    }
+    
+    }
+    friend int number(Perfect num);
+};
+int number(Perfect num){
+    if(num.sum==num.n)
+        cout<<"It is a Perfect Number"<<endl;
+    else
+    
+    cout<<"It is not Perfect Number"<<endl;
+    return num.sum;
+}
+int main(){
+    Perfect num;
+    num.input();
+    number(num);
+    return 0;
+}
