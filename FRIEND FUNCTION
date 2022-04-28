@@ -1,0 +1,24 @@
+#include<iostream>
+using namespace std;
+class table{
+    int n,i,sum,result;
+    public:
+    void setNumber(){
+        cout<<"Enter a Number = ";
+        cin>>n;
+    }
+    friend int Number(table);
+};
+int Number(table t){
+    for(t.i=1;t.i<=10;++t.i){
+        t.result = t.n*t.i;
+        cout<<t.n<<" * "<<t.i<<" = "<<t.result<<endl;  
+        }
+        return t.result;
+}
+int main(){
+    table tab;
+    tab.setNumber();
+    Number(tab);
+    return 0;
+}
