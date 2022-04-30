@@ -1,0 +1,38 @@
+#include<iostream>
+using namespace std;
+class Y;
+class X{
+    int data;
+    public:
+    void setData(int a){
+        data = a;
+    }
+    friend void add(X,Y);
+};
+class Y{
+    int value;
+    public:
+    void setData(int b){
+        value = b;
+    }
+    friend void add(X,Y);
+};
+void add(X j, Y k){
+    cout<<"Sum of "<<j.data<<" & "<<k.value <<" = "<<j.data + k.value<<endl;
+}
+int main(){
+    int a,b;
+    X o;
+    Y p;
+    
+    cout<<"Enter 1st Value = ";
+    cin>>a;
+    o.setData(a);
+    
+    cout<<"Enter 2nd Value = ";
+    cin>>b;
+    p.setData(b);
+    
+    add(o,p);
+    return 0;
+}
