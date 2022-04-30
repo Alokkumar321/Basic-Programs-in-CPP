@@ -1,0 +1,48 @@
+#include<iostream>
+using namespace std;
+class Y;
+class X{
+    int first;
+    public:
+    void setData(int a){
+        first = a;
+    }
+    void getData(){
+        cout<<"Value of first after swapping = "<<first<<endl;
+    }
+    friend void swap(X&,Y&);
+};
+class Y{
+    int second;
+    public:
+    void setData(int b){
+        second = b;
+    }
+    void getData(){
+        cout<<"Value of second after swapping = "<<second<<endl;
+    }
+    friend void swap(X&,Y&);
+};
+void swap(X& j, Y& k){
+    int temp;
+    temp = j.first;
+    j.first = k.second;
+    k.second =temp;
+}
+int main(){
+    int m,n;
+    X num;
+    Y sum;
+    
+    cout<<"Enter 1st Value = ";
+    cin>>m;
+    num.setData(m);
+    cout<<"Enter 2nd Value = ";
+    cin>>n;
+    sum.setData(n);
+    
+    swap(num,sum);
+    num.getData();
+    sum.getData();
+    return 0;
+}
