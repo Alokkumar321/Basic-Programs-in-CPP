@@ -1,0 +1,14 @@
+#include<iostream>
+using namespace std;
+inline float moneyRecieved(int currentmoney, float factor = 1.04)
+{
+    return currentmoney * factor;
+}
+int main()
+{
+    int a,b;
+    int money =100000;
+    cout<<"If you have "<<money<<" Rs in your Bank Account, You will Recieve = "<<moneyRecieved(money)<<endl;
+    cout<<"If you have "<<money<<" Rs in your Bank Account, You will Recieve = "<<moneyRecieved(money,2)<<endl;
+    return 0;
+}
