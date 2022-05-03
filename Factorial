@@ -1,0 +1,19 @@
+#include<iostream>
+using namespace std;
+int fact(int n)
+{
+    if(n == 0)
+    {
+        return 1;
+    }
+    else
+    return (n * fact(n-1)); //for eg., Taking 4 => 4 * fact(3) = 3 * fact(2) = 2 * fact(1) = 1 * 1 => 4*3*2*1 = 24
+}
+int main()
+{
+    int x;
+    cout<<"Enter a value = ";
+    cin>>x;
+    cout<<endl<<"Factorial of "<<x<<" is = "<<fact(x);
+    return 0;
+}
