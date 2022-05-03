@@ -1,0 +1,31 @@
+#include<iostream>
+using namespace std;
+inline int example( int a, int b)
+{
+    return a + b;
+}
+class InlineExample{
+    int sum,x,y;
+    public:
+    void setData();
+    void getData();
+};
+inline void InlineExample :: setData()
+{
+    cout<<"Enter 1st Value = ";
+    cin>>x;
+    cout<<"Enter 2nd Value = ";
+    cin>>y;
+}
+inline void InlineExample :: getData()
+{
+    sum = x * y;
+    cout<<"Result = "<<x*y;
+}
+int main()
+{
+    InlineExample num;
+    num.setData();
+    num.getData();
+    return 0;
+}
