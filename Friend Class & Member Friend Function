@@ -1,0 +1,47 @@
+#include<iostream>
+using namespace std;
+ class y;
+ class x
+ {
+     public:
+     int setData(y,y);
+     int getData(y,y);
+ };
+ class y
+ {
+     int a,b;
+     friend int x :: setData(y,y);// Individually declaring functions as friends
+     friend int x :: getData(y,y);
+     
+               //  OR  //
+               
+     friend class x; // Whole Class x is declared as friend
+     
+     public:
+     void setNumber(int m, int n)
+     {
+         a = m;
+         b = n;
+     }
+ };
+ int x :: setData(y c1, y c2)
+ {
+     cout<<"Sum of Real Part = "<<(c1.a + c2.a)<<endl;
+     return (c1.a + c2.a);
+ }
+ int x :: getData(y c1, y c2)
+ {
+     cout<<"Sum of Imaginary Part = "<<(c1.b + c2.b);
+     return (c1.b + c2.b);
+ }
+ int main()
+ {
+     y num, sum;
+     num.setNumber(2,3);
+     sum.setNumber(4,5);
+     
+     x print;
+     print.setData(num,sum);
+     print.getData(num,sum);
+     return 0;
+ }
