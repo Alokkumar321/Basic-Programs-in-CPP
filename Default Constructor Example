@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+class constructor
+{
+    int a,b;
+    public:
+    constructor(void);
+    void printNumber()
+    {
+        cout<<"Sum is "<<a<<" + "<<b<<"i"<<endl;
+    }
+};
+constructor :: constructor(void)
+{
+    a = 10;
+    b = 20;
+}
+int main()
+{
+    constructor c1; // Constructor initializes automaticallyk
+    c1.printNumber();
+    return 0;
+}
