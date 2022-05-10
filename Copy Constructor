@@ -1,0 +1,30 @@
+                                                #include<iostream>
+                                                using namespace std;
+                                                class Number
+                                                {
+                                                    int a;
+                                                    public:
+                                                    Number() // Default Constructor
+                                                    {
+                                                        a = 5;
+                                                    }
+                                                    Number(int x)
+                                                    {
+                                                        a = x;
+                                                    }
+                                                    Number(Number &obj) //Copy Constructor
+                                                    {
+                                                        a = obj.a;
+                                                    }
+                                                    void show()
+                                                    {
+                                                        cout<<"NUMBER IS : "<<a<<endl;
+                                                    }
+                                                };
+                                                int main()
+                                                {
+                                                    Number x,z;
+                                                    Number z1(z); //Copy Constructor Invoked
+                                                    z1.show();
+                                                    return 0;
+                                                }
