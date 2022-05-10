@@ -1,0 +1,21 @@
+#include<iostream>
+using namespace std;
+class complex{
+    int a,b;
+    public:
+    complex(int x, int y);// Constructor Declerartion
+    void printNumber(){
+        cout<<"Your Number = "<<a<<" + "<<b<<"i"<<endl;
+    }
+};
+complex :: complex(int x, int y){// Paramaterized constructor takes two parameters.
+    a = x;
+    b = y;
+}
+int main()
+{
+    complex c1(5,4);// Implicit Call
+    //  or
+    complex c1 = complex(5,4);// Explicit call
+    c1.printNumber();
+}
