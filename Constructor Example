@@ -20,3 +20,28 @@ int main()
     c.printNumber();
     return 0;
 }
+
+OR
+
+#include<iostream>
+using namespace std;
+class Cube
+{
+    int a;
+    public:
+    Cube(int x);
+    void printNumber()
+    {
+        cout<<"Volume of Cube : "<<a*a*a<<endl;
+    }
+};
+Cube :: Cube(int x)
+{
+    a = x;
+}
+int main()
+{
+    Cube c(4);
+    c.printNumber();
+    return 0;
+}
